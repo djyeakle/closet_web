@@ -47,7 +47,8 @@ function updatePassword(accountID) {
     fetch(`https://closet-app.onrender.com/api/login/${accountID}`, {
         method: "PUT",
         headers: {
-            "Content-Type": "application/json"
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
         },
         body: JSON.stringify({ password: newPassword }),
         mode: 'cors'
