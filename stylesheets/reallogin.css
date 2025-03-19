@@ -1,33 +1,22 @@
 body {
-    font-family: "Merriweather", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    margin: 20px;
-    padding: 40px;
+    background-color: antiquewhite;
 }
 
-.navbar {
-    background: burlywood;
+header {
+    margin: 0;
+    background-color: burlywood;
+    color: #402a09;
     padding: 20px;
-    display: flex;
-    justify-content: center;
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 7px 20px;
+h1 {
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    border-radius: 5px;
-    margin: 17px 100px;
-    background: #402a09;
-    transition: background 0.3s ease;
+    font-size: 50px;
+    text-align: center;
 }
 
 .container {
@@ -50,36 +39,48 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: 50px;
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-variation-settings: "wdth" 100;
+    color:#402a09;
 }
 
 label {
-    font-weight: bold;
     margin-top: 10px;
     display: block;
     text-align: left;
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-variation-settings: "wdth" 100;
+    font-size: 20px;
+    color:#402a09;
 }
 
 input {
-    width: calc(100% - 20px);
-    padding: 12px;
-    margin-top: 5px;
-    border: solid #ccc;
+    width: 650px;
+    padding: 15px;
+    margin-top: 10px;
+    border: solid burlywood;
     border-radius: 6px;
     font-size: 16px;
+    color:#402a09;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+input::placeholder {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color:burlywood;
 }
 
 .button-container {
@@ -90,7 +91,7 @@ input {
 .submit-btn {
     background: antiquewhite;
     color: black;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -100,6 +101,7 @@ input {
     font-style: normal;
     font-variation-settings: "wdth" 100;
     display: inline-block;
+    font-size: 20px;
 }
 
 .submit-btn:hover {

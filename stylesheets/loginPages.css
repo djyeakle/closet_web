@@ -24,7 +24,17 @@ body {
     transition: background 0.3s ease;
 }
 
-h2 {
+.adminMessage {
+    background-color: burlywood;
+    text-align: center;
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 6px;
+}
+
+h1 {
     font-size: 50px;
     color: #402a09;
     font-family: "Merriweather", serif;
@@ -32,16 +42,14 @@ h2 {
     font-weight: 700;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    text-align: center;
 }
 
-#grid-container {
-    max-width: 90%;
-    margin: auto;
+h2 {
+    font-size: 30px;
+    color:#402a09;
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    
 }
