@@ -1,21 +1,34 @@
 <html>
     <head>
-        <title>Admin Home Page</title>
-        <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
-        <script src="./js/getLogin.js"></script>
-        <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"></link>
-        <link href="./stylesheets/hometheme.css" rel="stylesheet"></link>
+        <title>Login</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.toaster.js"></script>
+        <link href="./stylesheets/reallogin.css" rel="stylesheet">
     </head>
     <body>
+        <h1>
+            Welcome to Closet Outfitters! Please Login:
+        </h1>
+        <div class="container">
+            <div class="form-container">
+                <h2>Login</h2>
+                <form class="form">
+                    <label for="accountID">Account ID:</label>
+                    <input type="text" id="accountID" name="accountID" placeholder="AccountID" required>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
 
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="addlogin.html">Create New Login</a>
-            <a href="changelogin.html">Change Password</a>
-            <a href="userlogin.html">Login</a>
+                    <div class="button-container">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
 
-        <h2>Admin - User Master Key</h2>
-        <div id="grid-container"></div>
+        <script src="./js/loginAuth.js"></script>
+
     </body>
 </html>
