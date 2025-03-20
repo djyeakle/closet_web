@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             $.toaster({priority : 'danger', title : 'Error', message : 'Oops something broke'});
 
         } else if(data.accountID == 1 && data.username == "djyeakle" && data.password == "vbnmrno4") {
-            window.open(`https://closet-app.onrender.com/${data.username}/login`);
+            window.open(`https://closetoutfitters.netlify.app/${data.username}login`);
 
         } else if(data.accountID == 11 && data.username == "aperenovich" && data.password == "bagel5") {
             window.open(`https://closet-app.onrender.com/${data.username}/login`);
