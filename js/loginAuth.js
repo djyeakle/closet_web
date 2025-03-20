@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
             window.open(`https://closetoutfitters.netlify.app/${data.username}login`);
 
         } else if(data.accountID == 11 && data.username == "aperenovich" && data.password == "bagel5") {
-            window.open(`https://closet-app.onrender.com/${data.username}/login`);
+            window.open(`https://closetoutfitters.netlify.app/${data.username}login`);
 
         } else if(data.accountID == 28 && data.username == "amhalbleib" && data.password == "woanifbiau") {
-            window.open(`https://closet-app.onrender.com/${data.username}/login`);
+            window.open(`https://closetoutfitters.netlify.app/${data.username}login`);
 
         } else {
             $.toaster({priority : 'danger', title : 'Error', message : 'Oops something broke'});
