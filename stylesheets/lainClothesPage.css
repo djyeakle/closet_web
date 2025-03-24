@@ -1,0 +1,47 @@
+body {
+    background-color:rgb(235, 215, 250);
+}
+
+.navbar {
+    background: rgb(177, 135, 222);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    border-radius: 5px;
+    margin: 17px 40px;
+    background: #290940;
+    transition: background 0.3s ease;
+}
+
+h2 {
+    font-size: 50px;
+    color: #290940;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-align: center;
+}
+
+#grid-container {
+    max-width: 90%;
+    margin: auto;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    
+}

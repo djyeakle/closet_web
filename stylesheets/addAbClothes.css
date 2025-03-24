@@ -1,0 +1,116 @@
+body {
+    background-color:  rgb(215, 246, 250);
+}
+
+.navbar {
+    background: rgb(135, 203, 222);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    border-radius: 5px;
+    margin: 17px 40px;
+    background: #092f40;
+    transition: background 0.3s ease;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color:#092f40;
+}
+
+.container {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+}
+
+.form-container {
+    background: rgb(135, 203, 222);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 60%;
+    max-width: 800px;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    text-align: left;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 20px;
+    color:#092f40;
+}
+
+input {
+    width: 650px;
+    padding: 15px;
+    margin-top: 10px;
+    border: solid rgb(135, 203, 222);
+    border-radius: 6px;
+    font-size: 16px;
+    color:#092f40;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input::placeholder {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color:rgb(135, 203, 222);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background: rgb(215, 246, 250);
+    color: black;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.submit-btn:hover {
+    background: #092f40;
+    color: white;
+}

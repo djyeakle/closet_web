@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(235, 215, 250);
+}
+
+.navbar {
+    background: rgb(177, 135, 222);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    border-radius: 5px;
+    margin: 17px 40px;
+    background: #290940;
+    transition: background 0.3s ease;
+}
+
+.adminMessage {
+    background-color: rgb(177, 135, 222);
+    text-align: center;
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 6px;
+}
+
+h1 {
+    font-size: 50px;
+    color:  #290940;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+h2 {
+    font-size: 30px;
+    color: #290940;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
