@@ -1,11 +1,9 @@
-let notificationCount = 0;
-
-document.getElementById("notifyBtn").addEventListener("click", async () => {
+document.getElementById("notifyBtn").addEventListener("click", () => {
     const message = document.getElementById("message").value.trim();
     const title = document.getElementById("title").value.trim();
 
     if(!message || !title) {
-        alert("Please enter a title and message before clicking the button.");
+        alert("Please enter a message before clicking the button.");
         return;
     }
 
@@ -14,28 +12,20 @@ document.getElementById("notifyBtn").addEventListener("click", async () => {
         return;
     }
 
-    let permission = Notification.requestPermission();
-
-    if(permission === "default") {
-        permission = await Notification.requestPermission();
-    } 
-
-    if(permission === "granted") {
-        setTimeout(() => showNotification(title, message), 5000);
-    } else {
-        alert("You need to allow notifications to receive them.")
+    if(Notification.permission === "granted") {
+        showNotification(title, message);
+    } else if(Notification.permission !== "denied") {
+        Notification.requestPermission().then(permission => {
+            if(permission === "granted") {
+                showNotification(title, message);
+            }
+        });
     }
 });
 
 function showNotification(title, message) {
-    if(Notification.permission === "granted") {
-            new Notification(title, {
-            body: message,
-            icon: "./images/coatHanger.png"
-        });     
-    
-        notificationCount++;
-        document.getElementById("notificationCount").textContent = `Notifications Sent: ${notificationCount}`;
-    }
-    
+    new Notification(title, {
+        body: message,
+        icon: "./images/coatHanger.png"
+    });      
 }
