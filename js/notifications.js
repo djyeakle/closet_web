@@ -1,3 +1,5 @@
+var notificationCount = 0;
+
 document.getElementById("notifyBtn").addEventListener("click", () => {
     const message = document.getElementById("message").value.trim();
     const title = document.getElementById("title").value.trim();
@@ -27,5 +29,8 @@ function showNotification(title, message) {
     new Notification(title, {
         body: message,
         icon: "./images/coatHanger.png"
-    });      
+    });   
+    
+    notificationCount++;
+    document.getElementById("notificationCount").textContent(`Notification Count: ${notificationCount}`);
 }
