@@ -1,11 +1,11 @@
-var notificationCount = 0;
+let notificationCount = 0;
 
-document.getElementById("notifyBtn").addEventListener("click", () => {
+document.getElementById("notifyBtn").addEventListener("click", async () => {
     const message = document.getElementById("message").value.trim();
     const title = document.getElementById("title").value.trim();
 
     if(!message || !title) {
-        alert("Please enter a message before clicking the button.");
+        alert("Please enter a title and message before clicking the button.");
         return;
     }
 
@@ -14,23 +14,28 @@ document.getElementById("notifyBtn").addEventListener("click", () => {
         return;
     }
 
-    if(Notification.permission === "granted") {
+    let permission = Notification.requestPermission();
+
+    if(permission === "default") {
+        permission = await Notification.requestPermission();
+    } 
+
+    if(permission === "granted") {
         setTimeout(() => showNotification(title, message), 5000);
-    } else if(Notification.permission !== "denied") {
-        Notification.requestPermission().then(permission => {
-            if(permission === "granted") {
-                setTimeout(() => showNotification(title, message), 5000);
-            }
-        });
+    } else {
+        alert("You need to allow notifications to receive them.")
     }
 });
 
 function showNotification(title, message) {
-    new Notification(title, {
-        body: message,
-        icon: "./images/coatHanger.png"
-    });     
+    if(Notification.permission === "granted") {
+            new Notification(title, {
+            body: message,
+            icon: "./images/coatHanger.png"
+        });     
     
-    notificationCount++;
-    document.getElementById("notificationCount").textContent = `Notifications Sent: ${notificationCount}`;
+        notificationCount++;
+        document.getElementById("notificationCount").textContent = `Notifications Sent: ${notificationCount}`;
+    }
+    
 }
