@@ -114,3 +114,14 @@ input::placeholder {
     background: #402a09;
     color: white;
 }
+
+p {
+    background-color: burlywood;
+    text-align: center;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    color:#402a09;
+}
