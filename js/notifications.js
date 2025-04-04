@@ -1,5 +1,3 @@
-var notificationCount = 0;
-
 document.getElementById("notifyBtn").addEventListener("click", () => {
     const message = document.getElementById("message").value.trim();
     const title = document.getElementById("title").value.trim();
