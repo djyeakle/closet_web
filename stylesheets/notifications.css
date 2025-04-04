@@ -125,3 +125,11 @@ p {
     font-size: 20px;
     color:#402a09;
 }
+
+.notificationCount {
+    background-color: burlywood;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 5px;
+    padding: 10px;
+}

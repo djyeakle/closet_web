@@ -13,11 +13,11 @@ document.getElementById("notifyBtn").addEventListener("click", () => {
     }
 
     if(Notification.permission === "granted") {
-        showNotification(title, message);
+        setTimeout(showNotification(title, message), 5000);
     } else if(Notification.permission !== "denied") {
         Notification.requestPermission().then(permission => {
             if(permission === "granted") {
-                showNotification(title, message);
+                setTimeout(showNotification(title, message), 5000);
             }
         });
     }

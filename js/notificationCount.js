@@ -7,7 +7,7 @@ updateDisplay();
 
 sendNotifyButton.addEventListener("click", () => {
     count++;
-    updateDisplay();
+    setTimeout(updateDisplay(), 5000);
 });
 
 function updateDisplay() {
