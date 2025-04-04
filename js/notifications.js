@@ -30,7 +30,4 @@ function showNotification(title, message) {
         body: message,
         icon: "./images/coatHanger.png"
     });   
-    
-    notificationCount++;
-    document.getElementById("notificationCount").textContent(`Notification Count: ${notificationCount}`);
 }
