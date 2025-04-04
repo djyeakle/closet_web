@@ -94,7 +94,7 @@ input::placeholder {
     margin-top: 20px;
 }
 
-.submit-btn {
+.notifyBtn {
     background: antiquewhite;
     color: black;
     padding: 10px 30px;
@@ -110,7 +110,7 @@ input::placeholder {
     font-size: 20px;
 }
 
-.submit-btn:hover {
+.notifyBtn:hover {
     background: #402a09;
     color: white;
 }

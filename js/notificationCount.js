@@ -11,5 +11,5 @@ sendNotifyButton.addEventListener("click", () => {
 });
 
 function updateDisplay() {
-    notificationCounter.innerHTML = count;
+    notificationCounter.innerHTML = `Notification Counter: ${count}`;
 };

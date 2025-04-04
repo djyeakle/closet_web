@@ -27,5 +27,8 @@ function showNotification(title, message) {
     new Notification(title, {
         body: message,
         icon: "./images/coatHanger.png"
-    });   
+    });  
+    
+    document.getElementById("title").value = "";
+    document.getElementById("message").value = "";
 }
