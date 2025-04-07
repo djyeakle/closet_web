@@ -7,7 +7,9 @@ fetch(API_URL)
         closet.accountID,
         closet.username,
         closet.password,
-        gridjs.html(`<input type='password' id='pass-${closet.accountID}' placeholder='New Password'> <button onclick='updatePassword(${closet.accountID})'>Update</button>`)
+        gridjs.html(`<input type='username' id='user-${closet.accountID}' placeholder='New Username'>
+                    <input type='password' id='pass-${closet.accountID}' placeholder='New Password'> <button onclick='updatePassword(${closet.accountID}) updateUsername(${closet.accountID})'>Update</button>
+            `)
     ]);
 
     new gridjs.Grid({
@@ -64,4 +66,33 @@ function updatePassword(accountID) {
         location.reload(); // Refresh to show updated password
     })
     .catch(error => alert("Error updating password: " + error));
+}
+
+function updateUsername(accountID) {
+    const newUsername = document.getElementById(`user-${accountID}`).value;
+    if (!newUsername) {
+        alert("Please enter a new username.");
+        return;
+    }
+
+    fetch(`https://closet-app.onrender.com/api/login/${accountID}`, {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+        body: JSON.stringify({ username: newUsername }),
+        mode: 'cors'
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Failed to update password");
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert("Username updated successfully");
+        location.reload(); // Refresh to show updated username
+    })
+    .catch(error => alert("Error updating username: " + error));
 }
