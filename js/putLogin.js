@@ -7,7 +7,7 @@ fetch(API_URL)
         closet.accountID,
         closet.username,
         closet.password,
-        gridjs.html(`<input type='password' id='pass-${closet.accountID}' placeholder='New Password'> <button onclick='updatePassword(${closet.accountID}) updateUsername(${closet.accountID})'>Update</button>`)
+        gridjs.html(`<input type='password' id='pass-${closet.accountID}' placeholder='New Password'> <button onclick='updatePassword(${closet.accountID})'>Update</button>`)
     ]);
 
     new gridjs.Grid({
