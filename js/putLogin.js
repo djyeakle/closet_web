@@ -5,7 +5,7 @@ fetch(API_URL)
 .then(data => {
     const formattedData = data.map(closet => [
         closet.accountID,
-        closet.username,
+        gridjs.html(`<span data-column-id="username" data-account-id="${closet.accountID}">${closet.username}</span>`),
         closet.password,
         gridjs.html(`<input type='password' id='pass-${closet.accountID}' placeholder='New Password'> <button onclick='updatePassword(${closet.accountID})'>Update</button>`)
     ]);
@@ -44,7 +44,7 @@ function updatePassword(accountID) {
         return;
     }
 
-    const usernameCell = document.querySelector(`td[data-column-id="username"][data-account-id="${accountID}"]`);
+    const usernameCell = document.querySelector(`span[data-column-id="username"][data-account-id="${accountID}"]`);
     const currentUsername = usernameCell ? usernameCell.textContent.trim() : null;
 
     if (!currentUsername) {
