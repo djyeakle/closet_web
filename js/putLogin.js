@@ -44,7 +44,7 @@ function updatePassword(accountID) {
         return;
     }
 
-    const usernameCell = document.querySelector(`td[data-column-id="Username"][data-account-id="${accountID}"]`);
+    const usernameCell = document.querySelector(`td[data-column-id="username"][data-account-id="${accountID}"]`);
     const currentUsername = usernameCell ? usernameCell.textContent.trim() : null;
 
     if (!currentUsername) {
