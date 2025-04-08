@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if(data.accountID == 1 && data.username == "djyeakle" && data.password == "vbnmrno4") {
             window.open(`https://closetoutfitters.netlify.app/${data.username}login`);
 
-        } else if(data.accountID == 11 && data.username == "aperenovich" && data.password == "bagel5") {
+        } else if(data.accountID == 11 && data.username == "aperenovich" && data.password == "bagel444") {
             window.open(`https://closetoutfitters.netlify.app/${data.username}login`);
 
-        } else if(data.accountID == 28 && data.username == "amhalbleib" && data.password == "woanifbiau") {
+        } else if(data.accountID == 28 && data.username == "amhalbleib" && data.password == "fleeber") {
             window.open(`https://closetoutfitters.netlify.app/${data.username}login`);
 
         } else {
